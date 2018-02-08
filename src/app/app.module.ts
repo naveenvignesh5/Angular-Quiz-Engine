@@ -10,6 +10,11 @@ import { QuizComponent } from './quiz/quiz.component';
 
 import { AppService } from './app.service';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +25,10 @@ import { AppService } from './app.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase, 'letslearn-dev'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     AppService
