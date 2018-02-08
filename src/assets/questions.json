@@ -1,0 +1,29 @@
+[
+    {
+        "question":"the question to be asked",
+        "options" : [
+            "option 1",
+            "option 2",
+            "option 3"
+        ],
+        "answer":"option 1"
+    },
+    {
+        "question":"the question to be asked 2",
+        "options" : [
+            "option 1",
+            "option 2",
+            "option 3"
+        ],
+        "answer":"option 2"
+    },
+    {
+        "question":"the question to be asked 3",
+        "options" : [
+            "option 1",
+            "option 2",
+            "option 3"
+        ],
+        "answer":"option 3"
+    }
+]

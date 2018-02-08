@@ -1,0 +1,33 @@
+<div class="container">
+
+  <form class="form-signin">
+    <h2 class="form-title">Please Register To Attend The Test</h2>
+    
+    <input type="text" class="form-control" placeholder="Name" required autofocus>
+    <input type="text" maxlength="3" class="form-control" placeholder="Roll Number" required>
+    Year
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="exampleRadios" [value]="1" checked>
+        1st Year
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="exampleRadios" [value]="2">
+        2nd Year
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" [value]="3">
+        3rd Year
+      </label>
+    </div>    
+    
+    <input type="password" class="form-control" placeholder="Password" required>
+    <input type="password" class="form-control" placeholder="Re-Enter Password" required>
+    <button routerLink='/home' class="btn btn-lg btn-secondary btn-block" type="button">Register</button>
+  </form>
+
+</div> <!-- /container -->
