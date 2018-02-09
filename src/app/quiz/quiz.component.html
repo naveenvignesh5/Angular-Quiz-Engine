@@ -1,10 +1,15 @@
 <div class="container">
-  <div class="card card-pos" *ngFor="let q of quizData">
+  <div class="card card-pos" *ngFor="let q of quizData; let i = index;">
     <div class="card-header">{{q.question}}</div>
     <div class="card-body">
       <div class="radio" *ngFor="let option of q.options">
-        <label><input type="radio" name="optradio">&nbsp;{{option}}</label>
+        <label><input type="radio" name='{{i}}'>&nbsp;{{option}}</label>
       </div>
     </div>
   </div>
+  
+  <button class="btn btn-danger" (click)="gotoHome()">Quit</button>
+  <button class="btn btn-warning">Reset All</button>
+  <button class="btn btn-primary">Submit Test</button>
+
 </div>

@@ -5,3 +5,18 @@
 .card-pos {
     margin: 10px;
 }
+
+.btn-container {
+    float: none;
+    margin: 0 auto;
+}
+
+.btn-container button {
+    margin-left: 20px;
+}
+
+.btn-container {
+    margin: auto;
+    display: block;
+    background-color: cadetblue;
+}

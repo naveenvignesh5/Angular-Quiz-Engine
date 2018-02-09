@@ -1,33 +1,23 @@
 <div class="container">
 
-  <form class="form-signin">
+  <form class="form-signin" #f="ngForm">
     <h2 class="form-title">Please Register To Attend The Test</h2>
     
-    <input type="text" class="form-control" placeholder="Name" required autofocus>
-    <input type="text" maxlength="3" class="form-control" placeholder="Roll Number" required>
-    Year
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="exampleRadios" [value]="1" checked>
-        1st Year
-      </label>
+    <input type="text" name="name" [(ngModel)]="user.name" name="user.name" class="form-control" placeholder="Name" required autofocus>
+    <input type="text" name="rollno" [(ngModel)]="user.rollno" maxlength="3" class="form-control" placeholder="Roll Number" required>
+    <input type="text" name="email" [(ngModel)]="user.email" maxlength="30" class="form-control" placeholder="E-mail" required>
+    <input type="password" name="password" [(ngModel)]="user.password" class="form-control" placeholder="Password" required>
+    <input type="password" name="temp" [(ngModel)]="temp" class="form-control" placeholder="Re-Enter Password" required>
+
+    <div class="form-group">
+      <select class="form-control" id="sel1" [(ngModel)]="user.year" name="year">   
+        <option value="" selected disabled>Please select year</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
     </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="exampleRadios" [value]="2">
-        2nd Year
-      </label>
-    </div>
-    <div class="form-check disabled">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" [value]="3">
-        3rd Year
-      </label>
-    </div>    
-    
-    <input type="password" class="form-control" placeholder="Password" required>
-    <input type="password" class="form-control" placeholder="Re-Enter Password" required>
-    <button routerLink='/home' class="btn btn-lg btn-secondary btn-block" type="button">Register</button>
+
+    <button class="btn btn-lg btn-secondary btn-block" type="button" (click)="registerUser()">Register</button>
   </form>
 
 </div> <!-- /container -->
