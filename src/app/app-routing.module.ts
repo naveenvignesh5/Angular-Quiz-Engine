@@ -15,7 +15,7 @@ const routes: Routes = [
   { 
     path:'quiz',
     component: QuizComponent, 
-    // canActivate: [CanLoginGuard] ,
+    canActivate: [CanLoginGuard] ,
     canDeactivate: [CanExitQuizGuard]
   }
 ];
