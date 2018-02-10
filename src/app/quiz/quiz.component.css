@@ -20,3 +20,22 @@
     display: block;
     background-color: cadetblue;
 }
+
+.radio-item {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.code-section {
+    background-color: darkslategrey;
+    color: wheat;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.code-sub-block {
+    margin: 0 auto;
+    display: block;
+    /* width: 150px; */
+}
