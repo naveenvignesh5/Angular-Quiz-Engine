@@ -25,18 +25,23 @@ export class FirebaseService {
     },err => console.log(err));
   }
 
-  async storeResult(score) {
-    let currentUser = this.afAuth.auth.currentUser;
-    this.afDB.object('/users/'+currentUser.uid+'/').update({
-      score: score,
-    });
-  }
-
   async getQuestions() {
     return this.afDB.list('/questions/').snapshotChanges();
   }
 
   isAuthenticated(): boolean {
     return this.afAuth.auth.currentUser ? true : false;
+  }
+
+  async submitTest(score) {
+    let uid = this.afAuth.auth.currentUser.uid;
+    
+    return this.afDB.object('/users/'+uid+'/').update({
+      score: score
+    });
+  }
+
+  logout() {
+    return this.afAuth.auth.signOut();
   }
 }
