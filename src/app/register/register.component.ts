@@ -18,15 +18,15 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser() {
-    console.log(this.user);
-    // this.router.navigateByUrl('/home');
     if(this.user.email && this.user.name && this.user.password && this.user.rollno && this.user.year && this.temp) {
       
-      this.firebase.register(this.user).then((res) => {
-        console.log(res);
-        this.router.navigateByUrl('/home');
-      },err => console.error(err));
-
-    } else console.log("some thing is wrong")
+      if(this.user.password === this.temp) {
+        this.firebase.register(this.user).then(res => {
+          console.log(res);
+          this.router.navigateByUrl('/home');
+        },err => console.error(err));
+      }
+      else console.log("Passwords don't match");
+    } else console.log("Enter all fields")
   }
 }
