@@ -7,5 +7,6 @@ export const environment = {
     projectId: "jec-quiz-app",
     storageBucket: "jec-quiz-app.appspot.com",
     messagingSenderId: "229540004321"
-  }
+  },
+  testDuration: 60 * 60 * 1,
 };
