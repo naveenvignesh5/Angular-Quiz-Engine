@@ -5,3 +5,8 @@ export interface User {
     rollno: number,
     year: number,
 }
+
+export interface Time {
+    min: any,
+    sec: any,
+}

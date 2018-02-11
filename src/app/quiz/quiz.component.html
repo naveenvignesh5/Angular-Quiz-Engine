@@ -1,11 +1,21 @@
-<div class="container">
+<div class="affix">
+  <h3>
+    Clock
+    <span class="badge badge-info">{{time.min}}&nbsp;:&nbsp;{{time.sec}}</span>
+  </h3>
+  
+    <div class="button-container">
+      <button class="btn btn-danger" (click)="quit()">Quit</button>
+      <button class="btn btn-primary" (click)="submitAnswers()">Submit Test</button>
+    </div>
+</div>
+
+<div class="container">  
   <div class="card card-pos" *ngFor="let q of quizData; let i = index;">
     <div class="card-header">{{i+1}}.&nbsp;{{q.question}}</div>
     <div class="card-body">
       <div *ngIf="q.description" class="code-section">
-        <div class="code-sub-block" innerHTML="{{formatCode(q.description)}}">
-          
-        </div>
+        <div class="code-sub-block" innerHTML="{{formatCode(q.description)}}"></div>
       </div>
       <label class="radio-inline radio-item">
         <span class="badge badge-info">A</span>
@@ -20,7 +30,7 @@
         &nbsp;{{q.option3}}
       </label>
       <label class="radio-inline radio-item">
-        <span class="badge badge-info">B</span>
+        <span class="badge badge-info">D</span>
         &nbsp;{{q.option4}}
       </label>
     </div>
@@ -36,9 +46,5 @@
       </div>
     </div>
   </div>
-
-  <button class="btn btn-danger" (click)="gotoHome()">Quit</button>
-  <button class="btn btn-warning">Reset All</button>
-  <button class="btn btn-primary" (click)="submitAnswers()">Submit Test</button>
-
+  
 </div>

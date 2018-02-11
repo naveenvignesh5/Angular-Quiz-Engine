@@ -39,3 +39,13 @@
     display: block;
     /* width: 150px; */
 }
+
+.button-container {
+    display: block;
+    margin: 0 auto;
+}
+
+.affix {
+    position: fixed;
+    margin: 20px;
+}
