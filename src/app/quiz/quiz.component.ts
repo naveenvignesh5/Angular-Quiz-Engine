@@ -81,7 +81,8 @@ export class QuizComponent implements OnInit {
 
   formatCode(code) {
     let c = code.replace(/;/g,';<br>')
-                .replace(/int/g,'<br>int main')
+                // .replace(/g,'')
+                .replace(/int main/g,'<br>int main')
                 .replace(/{/g,'<br>{');
     return c;
   }
