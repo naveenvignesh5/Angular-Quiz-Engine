@@ -44,4 +44,8 @@ export class FirebaseService {
   logout() {
     return this.afAuth.auth.signOut();
   }
+
+  async getScoreList() {
+    return this.afDB.list('/users/').snapshotChanges();
+  }
 }

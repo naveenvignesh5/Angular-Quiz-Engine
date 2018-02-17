@@ -3,7 +3,7 @@ export interface User {
     email: string,
     password: string,
     rollno: number,
-    year: number,
+    year: string,
 }
 
 export interface Time {

@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   constructor(private firebase: FirebaseService, private router: Router) { }
 
   ngOnInit() {
+    this.user.year = "Select Your Year";
   }
 
   registerUser() {
@@ -22,7 +23,6 @@ export class RegisterComponent implements OnInit {
       
       if(this.user.password === this.temp) {
         this.firebase.register(this.user).then(res => {
-          console.log(res);
           this.router.navigateByUrl('/home');
         },err => console.error(err));
       }

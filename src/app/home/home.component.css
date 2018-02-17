@@ -46,3 +46,8 @@
   .form-signin input[type="password"] {
     margin-bottom: 10px;
   }
+
+  .form-hyperlink {
+    margin: 10 auto;
+    display: block;
+  }

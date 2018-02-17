@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { ResultsComponent } from './results/results.component';
 
 import { FirebaseService } from './firebase.service';
 
@@ -26,7 +27,8 @@ import { environment } from '../environments/environment';
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    QuizComponent
+    QuizComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

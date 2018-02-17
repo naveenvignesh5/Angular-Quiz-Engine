@@ -1,0 +1,20 @@
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-info">
+      <div class="row">
+        <div class="col-2">S.No</div>
+        <div class="col-6">Name</div>
+        <div class="col-2">Year</div>
+        <div class="col-2">Score</div>
+      </div>
+    </li>
+    <li class="list-group-item" *ngFor="let user of users; let i = index;">
+      <div class="row">
+        <div class="col-2">{{i+1}}</div>
+        <div class="col-6">{{user.name}}</div>
+        <div class="col-2">{{user.year}}</div>
+        <div class="col-2">{{user.score}}</div>
+      </div>
+    </li>
+  </ul>
+</div>

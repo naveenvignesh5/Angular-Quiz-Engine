@@ -39,6 +39,9 @@
     z-index: 2;
   }
   
+  select option[disabled]:first-child {
+    display: none;
+  }
   /* .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
